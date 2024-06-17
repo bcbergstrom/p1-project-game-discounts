@@ -3,8 +3,11 @@ let dealsObj = undefined
 let prevDeal = undefined
 let dealInt = 0
 let currentDeal = undefined
-let userID = Math.floor(Math.random() * 100)
+let userID = null
 let ranOnce = false
+const globalNewLikedGames = []
+let star = ""
+const globalNewLikedUsers = []
 
 
 
@@ -40,6 +43,8 @@ const buttonHandler = () =>{
         if(dealsObj.length == 0){
             fetchFromShark()
         }
+        checkIfStarred()
+
     })
     prev.addEventListener("click", () => {
         if(currentDeal == prevDeal){
@@ -90,13 +95,52 @@ const assignData = (steamGameObj) => {
         price.textContent = "$" + currentDeal.salePrice
         price.href = `https://www.cheapshark.com/redirect?dealID=${currentDeal.dealID}&k=1`
         thumbnail.src = steamGameObj.header_image
-        title.textContent = steamGameObj.name
+        title.textContent = steamGameObj.name + star
         tags.textContent = steamGameObj.genres[0].description
 
 }
 
-const storeData = (userData) => {
-
+function storeData(){
+    fetch("http://localhost:3000/users")
+    .then(r => r.json())
+    .then(users1 => {
+        const filteredUsers = users1.filter(user1 => {
+            return  parseInt(user1.id) === parseInt(userID)
+        })
+        const tempTempUserID = userID.toString()
+        if(filteredUsers.length == 0){
+            fetch("http://localhost:3000/users", {
+                method:"POST",
+                headers:{
+                    'Content-Type':'application/json'
+        },
+                body:JSON.stringify({
+                    id:tempTempUserID,
+                    gamesLiked:[currentDeal.gameID]
+                })
+            })
+            .then(r => r.json())
+            .then(q => {
+                globalNewLikedGames.push(currentDeal.gameID)
+                checkIfStarred()
+            })
+        } else {
+            fetch(`http://localhost:3000/users/${(userID)}`, {
+                method:"PATCH",
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    gamesLiked:[...globalNewLikedGames,currentDeal.gameID]
+                })
+            })
+            .then(r => r.json())
+            .then(games => {
+                globalNewLikedGames.push(currentDeal.gameID)
+                checkIfStarred()
+            })
+        }
+    })
 }
 
 
@@ -107,7 +151,14 @@ const start = () => {
 }
 
 function onLoad() {
-    document.addEventListener("blur", onBlur)
+    document.addEventListener("blur", () => {
+        const form = document.querySelector("#purchase-form")
+        const body = document.querySelector("#main-grid")
+        body.className = "fixed-grid is-hidden"
+        form.className = "box"
+    
+    })
+    onBlur()
     const menu = document.querySelector("#menu_button")
     menu.addEventListener("mouseover", eventHover)
 }
@@ -127,6 +178,22 @@ function eventHover(){
 
 
 }
+//https://www.cheapshark.com/api/1.0/games?id=612
+function checkIfStarred(){
+    fetch(`http://localhost:3000/games/${currentDeal.gameID}`)
+    .then(r => r.json())
+    .then(games => {
+        console.log(games)
+        console.log(games["usersLiked"])
+        if(games.usersLiked.length == undefined){
+            star = ""
+        } else {
+            star = ""
+        }
+    }).catch(() => {
+        star = "*"
+    })
+}
 
 function onClick(){
     document.addEventListener("blur",onBlur)
@@ -145,16 +212,69 @@ function onBlur(){
     const yes = document.querySelector("#game-purchased")
     const no = document.querySelector("#game-not-purchased")
     yes.addEventListener("click", () => {
-        storeData(userID)
+        storeData()
         body.className = "fixed-grid"
         form.className = "box is-hidden"
+        storeGameData()
         refreshDeals()
     })
     no.addEventListener("click",() => {
         body.className = "fixed-grid"
         form.className = "box is-hidden"
     })
+
 }
 
+function  storeGameData(){
+    fetch("http://localhost:3000/games")
+    .then(r => r.json())
+    .then(games => {
 
-fetchFromShark()
+        const filteredGames = games.find(game => {
+        return game.id == currentDeal.gameID
+        })
+                if(filteredGames == undefined){
+            fetch("http://localhost:3000/games", {
+                method:"POST",
+                headers:{
+                    'Content-Type':'application/json'
+        },
+                body:JSON.stringify({
+                    id:currentDeal.gameID,
+                    steamID: currentDeal.steamAppID,
+                    dealID:currentDeal.dealID,
+                    usersLiked:[userID.toString()]
+                })
+            })
+            .then(r => r.json())
+            .then(users => {
+                checkIfStarred()
+
+            })
+        } else {
+            fetch(`http://localhost:3000/games/${currentDeal.gameID}`, {
+                method:"PATCH",
+                headers:{
+                    'Content-Type':'application/json'
+        },
+                body:JSON.stringify({
+                    usersLiked:[...filteredGames.usersLiked,userID.toString()]
+                })
+            })
+            .then(r => r.json())
+            .then(games => {
+                checkIfStarred()
+
+            })
+        }
+    })
+
+}
+function generatePage(){
+    document.addEventListener("DOMContentLoaded", () => {
+        userID = Math.floor(Math.random() * 1000)
+        fetchFromShark()
+    })
+}
+
+generatePage()

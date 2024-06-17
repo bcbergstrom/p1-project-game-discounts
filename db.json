@@ -1,0 +1,317 @@
+{
+  "games": [
+    {
+      "id": "137316",
+      "steamID": "291650",
+      "dealID": "xSxFguFqKoSVIAkSyxknVF8DhGC%2BAnTtFdmR9Z5E5aM%3D",
+      "usersLiked": [
+        "982",
+        "1",
+        "2",
+        "3",
+        "137316"
+      ]
+    },
+    {
+      "id": "145040",
+      "steamID": "365450",
+      "dealID": "cNO6jjogPpy0yrfcHQNbnlNSmM12wiiCpMmk%2FoAtuAs%3D",
+      "usersLiked": [
+        "982",
+        "1",
+        "2",
+        "3",
+        "145040"
+      ]
+    },
+    {
+      "id": "227942",
+      "steamID": "632470",
+      "dealID": "Uk9pH81%2BgPUwbkh9YzwMnYLT%2B%2FEaktqN8AgwMr6Y2wQ%3D",
+      "usersLiked": [
+        "209",
+        "227942",
+        "227942"
+      ]
+    },
+    {
+      "id": "177392",
+      "steamID": "666140",
+      "dealID": "MNTcozH6zGWXNe%2BtVA92Ky3qSW6TTZ7jlg01VWrQ37k%3D",
+      "usersLiked": [
+        "209",
+        "177392"
+      ]
+    },
+    {
+      "id": "152117",
+      "steamID": "387290",
+      "dealID": "5FvRYOyTI%2BDQ1gtsb9zR8kwkz39p0HZrAqegVciljA0%3D",
+      "usersLiked": [
+        "684",
+        "152117"
+      ]
+    },
+    {
+      "id": "136930",
+      "steamID": "282070",
+      "dealID": "9SmMh7Ht%2FEZvHMlMgrqRnQeGZCeIgThhOqSBjK0J6Xs%3D",
+      "usersLiked": [
+        "629"
+      ]
+    },
+    {
+      "id": "213773",
+      "steamID": "969990",
+      "dealID": "xd80ywqc5YH4xTkanjn%2Bpwdf2R0gVi5UEUFoLjOvIow%3D",
+      "usersLiked": [
+        "134",
+        "213773"
+      ]
+    },
+    {
+      "id": "187189",
+      "steamID": "609320",
+      "dealID": "9pIp54N%2FtzkMMTjC5Lqb0hnhNMuGdh%2FNTVG8Q1sJ1gc%3D",
+      "usersLiked": [
+        "134",
+        "187189",
+        "187189"
+      ]
+    },
+    {
+      "id": "273",
+      "steamID": "3830",
+      "dealID": "%2FUEehLFF%2FwAwtRg9Acvm0%2F0mq9ayqJdh8Ue6CH30eBU%3D",
+      "usersLiked": [
+        "134",
+        "273",
+        "273"
+      ]
+    },
+    {
+      "id": "122961",
+      "steamID": "298630",
+      "dealID": "EW6V%2BHdf2sNn%2FZAeJyIKsYQQ1eefiBNp%2BoQtsCpe%2Fbk%3D",
+      "usersLiked": [
+        "113"
+      ]
+    },
+    {
+      "id": "93503",
+      "steamID": "8870",
+      "dealID": "X8sebHhbc1Ga0dTkgg59WgyM506af9oNZZJLU9uSrX8%3D",
+      "usersLiked": [
+        "598"
+      ]
+    },
+    {
+      "id": "169840",
+      "steamID": "414340",
+      "dealID": "0yCPVxMJHRP8HMLIwyg3p9IH4UcVUU0zVGDepa%2BecJI%3D",
+      "usersLiked": [
+        "565"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "963",
+      "gamesLiked": [
+        "93503"
+      ]
+    },
+    {
+      "id": "981",
+      "gamesLiked": [
+        "136930",
+        "93503",
+        "188278"
+      ]
+    },
+    {
+      "id": "566",
+      "gamesLiked": [
+        "143380",
+        "213773",
+        "93503",
+        "93503",
+        "137316",
+        "137316",
+        "137316",
+        "122961",
+        "122961",
+        "122961",
+        "122961",
+        "152578"
+      ]
+    },
+    {
+      "id": "318",
+      "gamesLiked": [
+        "146236",
+        "136930"
+      ]
+    },
+    {
+      "id": "556",
+      "gamesLiked": [
+        "102717",
+        "154947",
+        "136930",
+        "188278",
+        "169840",
+        "191568",
+        "227942",
+        "273"
+      ]
+    },
+    {
+      "id": "719",
+      "gamesLiked": [
+        "154947"
+      ]
+    },
+    {
+      "id": "444",
+      "gamesLiked": [
+        "136930",
+        "227942"
+      ]
+    },
+    {
+      "id": "476",
+      "gamesLiked": [
+        "213773",
+        "273",
+        "187189",
+        "146236"
+      ]
+    },
+    {
+      "id": "288",
+      "gamesLiked": [
+        "227942"
+      ]
+    },
+    {
+      "id": "720",
+      "gamesLiked": [
+        "122961",
+        "93503"
+      ]
+    },
+    {
+      "id": "693",
+      "gamesLiked": [
+        "136930",
+        "137316"
+      ]
+    },
+    {
+      "id": "943",
+      "gamesLiked": [
+        "213773"
+      ]
+    },
+    {
+      "id": "99",
+      "gamesLiked": [
+        "136930"
+      ]
+    },
+    {
+      "id": "104",
+      "gamesLiked": [
+        "136930"
+      ]
+    },
+    {
+      "id": "982",
+      "gamesLiked": [
+        "137316",
+        "145040"
+      ]
+    },
+    {
+      "id": "90",
+      "gamesLiked": [
+        "146236",
+        "93503",
+        "273",
+        "157028",
+        "137316",
+        "191568",
+        "136930",
+        "145040",
+        "177392"
+      ]
+    },
+    {
+      "id": "209",
+      "gamesLiked": [
+        "227942",
+        "177392"
+      ]
+    },
+    {
+      "id": "684",
+      "gamesLiked": [
+        "152117"
+      ]
+    },
+    {
+      "id": "629",
+      "gamesLiked": [
+        "136930"
+      ]
+    },
+    {
+      "id": "134",
+      "gamesLiked": [
+        "213773",
+        "137316",
+        "187189",
+        "273"
+      ]
+    },
+    {
+      "id": "113",
+      "gamesLiked": [
+        "122961",
+        "187189",
+        "273"
+      ]
+    },
+    {
+      "id": "851",
+      "gamesLiked": [
+        "273"
+      ]
+    },
+    {
+      "id": "598",
+      "gamesLiked": [
+        "152117",
+        "213773",
+        "227942",
+        "187189",
+        "93503",
+        "177392"
+      ]
+    },
+    {
+      "id": "565",
+      "gamesLiked": [
+        "169840",
+        "227942"
+      ]
+    },
+    {
+      "id": "855",
+      "gamesLiked": [
+        "145040"
+      ]
+    }
+  ]
+}
