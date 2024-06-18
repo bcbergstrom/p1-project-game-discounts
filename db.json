@@ -112,6 +112,22 @@
       "usersLiked": [
         "565"
       ]
+    },
+    {
+      "id": "219615",
+      "steamID": "870780",
+      "dealID": "feQSLZIzxKb6QDHbvEx8M35I%2BUwY5gZLIxaBgqHaC6s%3D",
+      "usersLiked": [
+        "493"
+      ]
+    },
+    {
+      "id": "157028",
+      "steamID": "384190",
+      "dealID": "h3zzDw7%2FyH9RyK%2FxVWYET2S609ugWEMe0nCzmjsInBk%3D",
+      "usersLiked": [
+        "493"
+      ]
     }
   ],
   "users": [
@@ -311,6 +327,13 @@
       "id": "855",
       "gamesLiked": [
         "145040"
+      ]
+    },
+    {
+      "id": "493",
+      "gamesLiked": [
+        "219615",
+        "157028"
       ]
     }
   ]

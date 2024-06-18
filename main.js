@@ -69,6 +69,8 @@ const refreshDeals = () => {
 }
 
 
+
+
 const getGameData = (gameID) => {
     fetch(`https://cors-anywhere.herokuapp.com/http://store.steampowered.com/api/appdetails?appids=${gameID}`)
     .then(r => r.json())
