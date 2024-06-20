@@ -57,7 +57,8 @@
       "steamID": "282070",
       "dealID": "9SmMh7Ht%2FEZvHMlMgrqRnQeGZCeIgThhOqSBjK0J6Xs%3D",
       "usersLiked": [
-        "629"
+        "629",
+        "626"
       ]
     },
     {
@@ -334,6 +335,12 @@
       "gamesLiked": [
         "219615",
         "157028"
+      ]
+    },
+    {
+      "id": "626",
+      "gamesLiked": [
+        "136930"
       ]
     }
   ]

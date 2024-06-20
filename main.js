@@ -265,7 +265,7 @@ function onBlur(){
 }
 
 
-//stores a bunch of data based on likes for the game
+//stores a bunch of data based on likes for the games
 function  storeGameData(){
     fetch("http://localhost:3000/games")
     .then(r => r.json())
